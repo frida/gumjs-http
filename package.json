@@ -8,8 +8,8 @@
   "homepage": "http://www.frida.re",
   "main": "index.js",
   "files": [
-    "index.js",
-    "lib/**/*.js"
+    "/index.js",
+    "/lib/**/*.js"
   ],
   "browserify": {
     "transform": [
