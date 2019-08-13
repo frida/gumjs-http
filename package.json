@@ -20,6 +20,6 @@
     "url": "http://github.com/frida/frida-http/issues"
   },
   "dependencies": {
-    "http-parser-js": "^0.4.4"
+    "http-parser-js": "^0.5.1"
   }
 }
