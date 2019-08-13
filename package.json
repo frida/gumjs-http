@@ -5,7 +5,7 @@
   "keywords": [
     "frida"
   ],
-  "homepage": "http://www.frida.re",
+  "homepage": "https://www.frida.re",
   "main": "index.js",
   "files": [
     "/index.js",
@@ -14,10 +14,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "http://github.com/frida/frida-http.git"
+    "url": "https://github.com/frida/frida-http.git"
   },
   "bugs": {
-    "url": "http://github.com/frida/frida-http/issues"
+    "url": "https://github.com/frida/frida-http/issues"
   },
   "dependencies": {
     "http-parser-js": "^0.5.1"
