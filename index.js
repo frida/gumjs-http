@@ -1,32 +1,59 @@
-exports.IncomingMessage = require('./lib/_http_incoming').IncomingMessage;
+import { Agent, globalAgent } from './lib/_http_agent.js';
+import { ClientRequest } from './lib/_http_client.js';
+import { methods as rawMethods } from './lib/_http_common.js';
+import { IncomingMessage } from './lib/_http_incoming.js';
+import { OutgoingMessage } from './lib/_http_outgoing.js';
+import {
+  Server,
+  ServerResponse,
+  STATUS_CODES,
+  _connectionListener,
+} from './lib/_http_server.js';
 
-exports.OutgoingMessage = require('./lib/_http_outgoing').OutgoingMessage;
+const METHODS = rawMethods.slice().sort();
 
-exports.METHODS = require('./lib/_http_common').methods.slice().sort();
+export default {
+  IncomingMessage,
+  OutgoingMessage,
+  METHODS,
+  Agent,
+  globalAgent,
+  Server,
+  ServerResponse,
+  STATUS_CODES,
+  _connectionListener,
+  createServer,
+  ClientRequest,
+  request,
+  get,
+};
 
-const agent = require('./lib/_http_agent');
-exports.Agent = agent.Agent;
-exports.globalAgent = agent.globalAgent;
+export {
+  IncomingMessage,
+  OutgoingMessage,
+  METHODS,
+  Agent,
+  globalAgent,
+  Server,
+  ServerResponse,
+  STATUS_CODES,
+  _connectionListener,
+  createServer,
+  ClientRequest,
+  request,
+  get,
+};
 
-const server = require('./lib/_http_server');
-exports.ServerResponse = server.ServerResponse;
-exports.STATUS_CODES = server.STATUS_CODES;
-exports._connectionListener = server._connectionListener;
-const Server = exports.Server = server.Server;
-
-exports.createServer = function(requestListener) {
+function createServer(requestListener) {
   return new Server(requestListener);
-};
+}
 
-const client = require('./lib/_http_client');
-const ClientRequest = exports.ClientRequest = client.ClientRequest;
-
-exports.request = function(options, cb) {
+function request(options, cb) {
   return new ClientRequest(options, cb);
-};
+}
 
-exports.get = function(options, cb) {
-  var req = exports.request(options, cb);
+function get(options, cb) {
+  const req = request(options, cb);
   req.end();
   return req;
-};
+}
