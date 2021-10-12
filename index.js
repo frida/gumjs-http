@@ -1,5 +1,3 @@
-'use strict';
-
 exports.IncomingMessage = require('./lib/_http_incoming').IncomingMessage;
 
 exports.OutgoingMessage = require('./lib/_http_outgoing').OutgoingMessage;
