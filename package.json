@@ -1,11 +1,14 @@
 {
-  "name": "frida-http",
+  "name": "@frida/http",
+  "description": "Node.js's http module for Frida",
   "version": "3.0.0",
-  "description": "Node.js compatible “http” module for Frida",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "frida"
   ],
-  "homepage": "https://www.frida.re",
+  "homepage": "https://frida.re",
   "main": "index.js",
   "files": [
     "/index.js",
@@ -14,10 +17,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/frida/frida-http.git"
+    "url": "https://github.com/frida/gumjs-http.git"
   },
   "bugs": {
-    "url": "https://github.com/frida/frida-http/issues"
+    "url": "https://github.com/frida/gumjs-http/issues"
   },
   "dependencies": {
     "http-parser-js": "^0.5.1"
