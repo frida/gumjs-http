@@ -24,6 +24,6 @@
     "url": "https://github.com/frida/gumjs-http/issues"
   },
   "dependencies": {
-    "@frida/http-parser": "^1.0.0"
+    "http-parser-js": "^0.5.3"
   }
 }
