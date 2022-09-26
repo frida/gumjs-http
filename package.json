@@ -1,7 +1,7 @@
 {
   "name": "@frida/http",
   "description": "Node.js's http module for Frida",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "publishConfig": {
     "access": "public"
   },
